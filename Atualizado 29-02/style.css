@@ -1,0 +1,119 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+:root {
+    --cor-de-fundo: #161618;
+    --verde: #6fff57;
+    --branco: #ffffff;
+    --botão-ativo: #3a375e;
+    --botão-inativo: rgba(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+    --roxo: #AE26B5;
+    --azul: #495AD1;
+}
+body {
+background-color: var(--cor-de-fundo);
+color: var(--branco);
+font-family: 'Chakra Petch', sans-serif;
+}
+
+.Conteúdo-principal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Título-principal{
+  text-align: left;
+  width: 100;
+  font-size: 32px;
+}
+
+.Título-principal span{
+  color: var(--roxo);
+}
+
+.Botão{
+  font-family: "Crakra Petch", sans-serif;
+  background-color: var(--botão-inativo);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  font-size: 18px;
+  align-items: center;
+  width: 100%;
+  border-bottom: 4px solid var(--botão-ativo);
+  border-left: 2px solid var(--botão-ativo);
+  border-right: 2px solid var(--botão-ativo);
+  border-top: none;
+}
+.Botão:first-child{
+  border-radius: 40px 40px 0 0;
+}
+
+.Botões {
+  display: block;
+}
+.Botão.ativo{
+  background-color: var(--botão-ativo);
+  border-bottom: 4px solid var(--roxo);
+}
+
+.Abas-textos{
+  background-color: var(--texto-fundo);
+  padding: 40px;
+  border-radius: 0 0 40px 40px;
+}
+.Aba-conteúdo.ativo {
+  display: block;
+}
+.Aba-conteúdo{
+  display: none;
+}
+.Aba-conteúdo-título-principal{
+  font-size: 28px;
+  text-align: center;
+}
+.Aba-conteúdo-título-secundário{
+  text-align: center;
+  color: var(--azul);
+  text-transform: uppercase;
+}
+
+.Contador {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+.Contador-digito{
+  padding: 0 16px;
+  text-align: center;
+  min-width: 50px;
+}
+.Contador-digito-número{
+  font-size: 30px;
+  margin: 0;
+}
+
+.Contador-digito-texto{
+  color: var(--azul);
+  font-size: 20px;
+  margin: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  .Botões{
+    display: flex;
+  }
+  .Botão:first-child{
+    border-radius: 40px 0 0 0;
+  }
+  .Botão:last-child{
+    border-radius: 0 40px 0 0;
+  }
+}
